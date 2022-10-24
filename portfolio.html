@@ -19,10 +19,17 @@
   </head>
   <body>
     <!-- Site header -->
-    <header>
+    <header class="page-header">
       <div class="container container--position">
         <nav class="main">
-          <a href="./index.html" class="logo">Web<span class="logo-detail">Studio</span></a>
+          <div class="mobile-main">
+            <a href="./index.html" class="logo">Web<span class="logo-detail">Studio</span></a>
+            <button type="button" class="menu-button js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+              <svg width="24" height="16" aria-label="Переключатель мобильного меню">
+                <use class="icon-menu" href="./images/icons.svg#icon-menu_24px"></use>
+              </svg>
+            </button>
+          </div>
           <ul class="site-nav">
             <li class="site-nav__point">
               <a href="./index.html" class="site-nav__link">Студія</a>
@@ -225,76 +232,98 @@
     </main>
     <footer class="section-footer">
       <div class="footer-container">
-        <div class="adress">
-          <a href="./index.html" class="footer-logo"
-            >Web<span class="adress__logo-detail">Studio</span></a
-          >
-          <address>
-            <ul class="adress-footer">
-              <li class="adress-footer__list">
+        <div class="wrapper">
+          <div class="adress">
+            <a href="./index.html" class="footer-logo"
+              >Web<span class="adress__logo-detail">Studio</span></a
+            >
+            <address>
+              <ul class="adress-footer">
+                <li class="adress-footer__list">
+                  <a
+                    href="https://goo.gl/maps/HE9teN7HXXNs7wLy7"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    class="adress-footer__contact--color"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="adress-footer__list">
+                  <a href="mailto:info@devstudio.com" class="adress-footer__contact"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="adress-footer__list">
+                  <a href="tel:+380961111111" class="adress-footer__contact">+38 096 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="web">
+            <p class="web-text">приєднуйтесь</p>
+            <ul class="web-list">
+              <li class="web-list__item">
                 <a
-                  href="https://goo.gl/maps/HE9teN7HXXNs7wLy7"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  class="adress-footer__contact--color"
-                  >м. Київ, пр-т Лесі Українки, 26</a
+                  class="web-list__link"
                 >
+                  <svg class="web-list__icon">
+                    <use href="./images/icons.svg#icon-instagram-2"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="adress-footer__list">
-                <a href="mailto:info@devstudio.com" class="adress-footer__contact"
-                  >info@devstudio.com</a
+              <li class="web-list__item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="web-list__link"
                 >
+                  <svg class="web-list__icon">
+                    <use href="./images/icons.svg#icon-twitter-1"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="adress-footer__list">
-                <a href="tel:+380961111111" class="adress-footer__contact"
-                  >+38 096 111 11 11</a
+              <li class="web-list__item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="web-list__link"
                 >
+                  <svg class="web-list__icon">
+                    <use href="./images/icons.svg#icon-facebook-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="web-list__item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="web-list__link"
+                >
+                  <svg class="web-list__icon">
+                    <use href="./images/icons.svg#icon-linkedin-1"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div>
-          <p class="web-text">приєднуйтесь</p>
-          <ul class="web-list">
-            <li class="web-list__item">
-              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="web-list__link">
-                <svg class="web-list__icon">
-                  <use href="./images/icons.svg#icon-instagram-2"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="web-list__item">
-              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="web-list__link">
-                <svg class="web-list__icon">
-                  <use href="./images/icons.svg#icon-twitter-1"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="web-list__item">
-              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="web-list__link">
-                <svg class="web-list__icon">
-                  <use href="./images/icons.svg#icon-facebook-1"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="web-list__item">
-              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="web-list__link">
-                <svg class="web-list__icon">
-                  <use href="./images/icons.svg#icon-linkedin-1"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="subscribe">
+        <form class="subscribe">
           <b class="subscribe__title">Підпишіться на розсилку</b>
           <label class="subscribe__label">
             <input type="email" name="mail" class="subscribe__input" placeholder="E-mail" />
+            <div class="footer-submit-wrap">
+              <button type="submit" class="footer-submit">
+                <span class="footer-submit__title">Підписатися</span>
+              </button>
+            </div>
           </label>
-          <button type="submit" class="footer-submit">
-            <span class="footer-submit__title">Підписатися</span>
-          </button>
-        </div>
+        </form>
       </div>
     </footer>
     <script src="./js/modal.js"></script>
